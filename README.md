@@ -1,7 +1,12 @@
 # TermometerNTR
 
-Penjelasan Source code 
+Saya membuat termometer sebuah termometer sederhana yaitu berfungsi untuk mendeteksi suhu tubu. Kenapa saya membuat ini ? karena saya sangat resah dengan penggunaan termometer manual yang hanya kita bisa lihat presisi hanya 5 baris 
+![Termometer](https://user-images.githubusercontent.com/56785130/112773504-7fc7e900-9060-11eb-9d35-8b3a335157da.png)
+Ini membuat kesulitan untuk menentukan dengan digit-digit yang kecil seperti misalnya suhu 36.7 celsius. Alat ini bisa membantu mendeteksi untuk 2 digit dibelakang koma sehingga lebih akurat karena menggunakan 2 decimal dibelakang koma. Alat ini berguna untuk mengecek suhu tubuh dengan penggunaan alat sederhana dan lebih akurat dari yang manual. Berfungsi untuk mendeteksi suhu orang-orang yang terdampat COVID-19 ataupun untuk mendeteksi kondisi demam seseorang. Hal ini sangat bermanfaat untuk kehidupan yang keberlanjutan dikarenakan cek suhu tubuh untuk mendeteksi apakah tubuh sedang dalam keadaan prima atau tidak.
 
+Penjelasan Source code
+
+1. Tahap Insiasi
 ``` c
 #include<LiquidCrystal.h>
 LiquidCrystal lcd(12,11,5,4,3,2);
@@ -11,7 +16,11 @@ int tmp = A1;
 int baselineTemp = 0;
 int celsius = 0;
 int fahrenheit = 0;
+```
 
+
+2. Tahap pembuatan setup(untuk menghubungi arduino dan sistem kerja)
+``` c
 void setup()
 {
   pinMode(A0, INPUT);
@@ -22,13 +31,14 @@ void setup()
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
 }
+```
 
+3. Tahap perulangan proses
+``` c
 void loop()
 {
   baselineTemp = 40;
-  
   celsius = map(((analogRead(A0) - 20) * 3.04), 0, 1023, -40, 125);
-  
   fahrenheit = ((celsius * 9) / 5 + 32);
   Serial.print(celsius);
   Serial.print(" C, ");
@@ -36,7 +46,6 @@ void loop()
   Serial.println(" F");
   value = analogRead(tmp)*0.004882814;
   value = (value - 0.5) * 100.0;
-  
   if (celsius < baselineTemp && celsius > 27) {
     digitalWrite(7, LOW);
     digitalWrite(6, HIGH);
@@ -52,3 +61,5 @@ void loop()
   lcd.clear();
 }
 ```
+Penjelasan source code diatas -> 
+
