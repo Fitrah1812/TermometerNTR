@@ -4,7 +4,7 @@ Saya membuat termometer sebuah termometer sederhana yaitu berfungsi untuk mendet
 ![Termometer](https://user-images.githubusercontent.com/56785130/112773504-7fc7e900-9060-11eb-9d35-8b3a335157da.png)
 
 Ini membuat kesulitan untuk menentukan dengan digit-digit yang kecil seperti misalnya suhu 36.7 celsius. Alat ini bisa membantu mendeteksi untuk 2 digit dibelakang koma sehingga lebih akurat karena menggunakan 2 decimal dibelakang koma. Alat ini berguna untuk mengecek suhu tubuh dengan penggunaan alat sederhana dan lebih akurat dari yang manual. Berfungsi untuk mendeteksi suhu orang-orang yang terdampat COVID-19 ataupun untuk mendeteksi kondisi demam seseorang. Hal ini sangat bermanfaat untuk kehidupan yang keberlanjutan dikarenakan cek suhu tubuh untuk mendeteksi apakah tubuh sedang dalam keadaan prima atau tidak.
-![termometer](https://github.com/Fitrah1812/TermometerNTR/blob/main/Dokumentasi/Penugasan_Camin_%20NCC.png)
+![termometer](https://github.com/Fitrah1812/TermometerNTR/blob/main/Dokumentasi/Penugasan_Camin_NCC.png)
 Penjelasan Source code
 
 1. Tahap Insiasi
