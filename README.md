@@ -12,28 +12,24 @@ Penjelasan Source code
 #include<LiquidCrystal.h>
 LiquidCrystal lcd(12,11,5,4,3,2);
 float value;
-int tmp = A1;
-
 int baselineTemp = 0;
 int celsius = 0;
 int fahrenheit = 0;
 ```
-Penjelesan source code diatas ->
+Penjelesan source code diatas -> Inisiasi ini berfungsi untuk penggunaan variabel nantinya yang akan digunakan diprogram. disini menggunakan library LiquidCrystal.h karena disini saya menggunakan LCD 16x2 untuk menampilkan suhu yang terdeteksi. Setelah itu saya letakkan pin-pin di LiquidCrystal lcd(12,11,5,4,3,2). Float Value untuk menyimpan value yang didapat dari pmeberian suhu nantinya. int baselineTemp adalah batas suhu yang ditetapkan yaitu 40 derajat yang saya letakkan meninjau dari suhu badan penderita covid-19 yang bisa mencapai batas atas tersebut atau melebihinya. Setelah itu ada variavel celsius dan fahrenheit untuk dikeluarkan nilainya di serial monitor.
 
 2. Tahap pembuatan setup(untuk menghubungi arduino dan sistem kerja)
 ``` c
 void setup()
 {
   pinMode(A0, INPUT);
-  //pinMode(tmp,INPUT);
   Serial.begin(9600);
-
   pinMode(2, OUTPUT);
   pinMode(3, OUTPUT);
   pinMode(4, OUTPUT);
 }
 ```
-Penjelasan source code diatas ->
+Penjelasan source code diatas -> Berikut merupakan pemasangan pinMode 
 
 3. Tahap perulangan proses
 ``` c
@@ -63,5 +59,5 @@ void loop()
   lcd.clear();
 }
 ```
-Penjelasan source code diatas -> 
+Penjelasan source code diatas -> Ini merupakan hasil loopingnya
 
